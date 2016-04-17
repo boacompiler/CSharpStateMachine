@@ -31,13 +31,13 @@ namespace StateMachineTest.States
             Student student = (Student)entity;
             if (student.Boredom > 5)
             {
-                Console.WriteLine(student.Name + ": Fuck it, I'm leaving");
+                Console.WriteLine(student.Name + ": I'm leaving");
                 student.Boredom = 0;
                 student.StateMachine.ChangeState(GoingToUni.Instance);
             }
             if (student.Fatigue > 5)
             {
-                Console.WriteLine(student.Name + ": Got ist tot");
+                Console.WriteLine(student.Name + ": I'm tired");
                 student.Fatigue = 0;
                 student.StateMachine.ChangeState(AtUni.Instance);
             }
@@ -52,7 +52,7 @@ namespace StateMachineTest.States
         {
             if (message == MessageType.Hello)
             {
-                Console.WriteLine("Hi, how are you!");
+                Console.WriteLine("Hi, how are you!"); //TODO this isn't being called correctly
             }
             Console.WriteLine("Hi, how are you!");
             base.OnMessage(entity, message);

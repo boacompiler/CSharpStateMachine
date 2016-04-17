@@ -23,7 +23,7 @@ namespace StateMachineTest.States
         public override void Enter(BaseEntity entity)
         {
             Student student = (Student)entity;
-            Console.WriteLine(student.Name+": Shit, nearly missed my train");
+            Console.WriteLine(student.Name+": nearly missed my train");
         }
 
         public override void Update(BaseEntity entity)

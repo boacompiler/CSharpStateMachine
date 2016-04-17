@@ -30,7 +30,7 @@ namespace StateMachineTest.States
         {
             Student student = (Student)entity;
             student.Boredom += 1;
-            Console.WriteLine(student.Name + ": why am i still here...");
+            Console.WriteLine(student.Name + ": i'm studying");
         }
 
         public override void Exit(BaseEntity entity)
